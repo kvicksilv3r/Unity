@@ -19,7 +19,11 @@ public class GraveScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD
 		z -= CellPrefab.renderer.bounds.size.z * Time.deltaTime * speed;
+=======
+		z -= CellPrefab.renderer.bounds.size.z * Time.deltaTime * GlobalVariables.speed;
+>>>>>>> Latest Version
 		transform.position = new Vector3 (x,2, z);
 
 		if(z <= despawnPoint){

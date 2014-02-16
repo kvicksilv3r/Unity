@@ -1,6 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GraveScript.cs">
+    <Files>
+      <File FileName="Assets\CellScript.cs" Line="28" Column="59" />
+      <File FileName="Assets\LeftTreeScript.cs" Line="19" Column="2" />
+      <File FileName="Assets\PlayerScript.cs" Line="31" Column="101" />
+      <File FileName="Assets\GlobalVariables.cs" Line="6" Column="16" />
+      <File FileName="Assets\EyeScript.cs" Line="22" Column="77" />
+      <File FileName="Assets\GraveScript.cs" Line="22" Column="69" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+>>>>>>> Latest Version
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

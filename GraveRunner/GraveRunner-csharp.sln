@@ -5,6 +5,8 @@ Project("{B8C94BF4-A0CE-6651-2329-DD8862A4F26C}") = "GraveRunner", "Assembly-CSh
 EndProject
 Project("{B8C94BF4-A0CE-6651-2329-DD8862A4F26C}") = "GraveRunner", "Assembly-CSharp-vs.csproj", "{819699AC-B9B9-9102-A494-E4AE17CEEF20}"
 EndProject
+Project("{B8C94BF4-A0CE-6651-2329-DD8862A4F26C}") = "GraveRunner", "Assembly-CSharp-Editor-vs.csproj", "{3DF96032-F442-E0C7-712D-484C86DEEBF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,16 @@ Global
 		{819699AC-B9B9-9102-A494-E4AE17CEEF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{819699AC-B9B9-9102-A494-E4AE17CEEF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{819699AC-B9B9-9102-A494-E4AE17CEEF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF96032-F442-E0C7-712D-484C86DEEBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF96032-F442-E0C7-712D-484C86DEEBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF96032-F442-E0C7-712D-484C86DEEBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF96032-F442-E0C7-712D-484C86DEEBF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 																										GlobalSection(MonoDevelopProperties) = preSolution
+								GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -40,6 +47,9 @@ Global
 		$3.inheritsSet = Mono
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
+		$0.DotNetNamingPolicy = $4
+		$4.DirectoryNamespaceAssociation = None
+		$4.ResourceNamePolicy = FileFormatDefault
 	EndGlobalSection
 
 EndGlobal
