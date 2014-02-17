@@ -3,7 +3,8 @@ using System.Collections;
 
 public class GlobalVariables : MonoBehaviour {
 
-	public static float speed = 1;
+	public static float speed = 0.75f;
+	public float swag = 0.75f;
 
 	// Use this for initialization
 	void Start () {
@@ -13,5 +14,6 @@ public class GlobalVariables : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		speed = swag;
 	}
 }

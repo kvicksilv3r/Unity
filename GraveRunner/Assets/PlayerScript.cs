@@ -5,45 +5,41 @@ using System.Collections.Generic;
 public class PlayerScript : MonoBehaviour {
 
 	public int currLane = 1;
-
 	public float[] lane;
-
 	public bool isInLane = true;
-
 	public float currHeight;
+	public float defaultHeight;
+	bool goingUp = false;
+	bool goingDown = false;
+	public GameObject Jumper;
+
+	//test 
+	public static Vector3[]jumpPath = new Vector3[3];
 
 	// Use this for initialization
 	void Start () {
 		lane = new float[]{-4.5f, 0, 4.5f};
-		//lane[0] = new float (-4.5f);
-		//lane[1] = new float (0);
-		//lane[2] = new float (4.5f);
-
+		jumpPath = iTweenPath.GetPath("dapath");
 		currHeight = transform.position.y;
+		defaultHeight = transform.position.y;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		currHeight = transform.position.y;
+		/*
+		currHeight = JumperScript.height;
 
-		if (!isInLane){
+		//if (!isInLane){
 			iTween.MoveTo(gameObject, new Vector3(lane[currLane], currHeight, 0), (0.5f/GlobalVariables.speed));
-		}
-
-		if(transform.position.x != lane[currLane]){
-			isInLane = false;
-		} 
-		else{
-			isInLane = true;
-		}
+		//}
 
 		if (Input.GetKeyDown("a")) {
 			if(currLane > 0){
 				currLane--;
 			}
 		}
-
+		
 		if (Input.GetKeyDown("d")) {
 			if (currLane < 2) {
 				currLane++;
@@ -56,7 +52,12 @@ public class PlayerScript : MonoBehaviour {
 
 		if (currLane > 2) {
 						currLane = 2;
-				}
+						}
+						*/
+
+		transform.position = new Vector3 (VerticalMovementScript.verticalPos, JumperScript.height, 0);
+
+				
 		
 	}
 }

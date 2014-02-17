@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Doggges stuff/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>F:/Unity/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Doggges stuff/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>F:/Unity/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -52,9 +52,11 @@
      <Compile Include="Assets\GlobalVariables.cs" />
      <Compile Include="Assets\GraveRunnerAssets\Scripts\LifetimeVariables.cs" />
      <Compile Include="Assets\GraveScript.cs" />
+     <Compile Include="Assets\JumperScript.cs" />
      <Compile Include="Assets\LeftTreeScript.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
      <Compile Include="Assets\SetupScript.cs" />
+     <Compile Include="Assets\VerticalMovementScript.cs" />
      <Compile Include="Assets\iTweenEditor\Examples\StartAndStopTween.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\EventParamMappings.cs" />
      <Compile Include="Assets\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
