@@ -27,37 +27,12 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		/*
-		currHeight = JumperScript.height;
-
-		//if (!isInLane){
-			iTween.MoveTo(gameObject, new Vector3(lane[currLane], currHeight, 0), (0.5f/GlobalVariables.speed));
-		//}
-
-		if (Input.GetKeyDown("a")) {
-			if(currLane > 0){
-				currLane--;
-			}
-		}
-		
-		if (Input.GetKeyDown("d")) {
-			if (currLane < 2) {
-				currLane++;
-			}
-		}
-
-		if (currLane < -1) {
-						currLane = -1;
-				}
-
-		if (currLane > 2) {
-						currLane = 2;
-						}
-						*/
-
 		transform.position = new Vector3 (VerticalMovementScript.verticalPos, JumperScript.height, 0);
 
-				
-		
+	}
+
+	void OnCollisionEnter (Collision col)
+	{
+		print ("Lel feg u ist das homo");
 	}
 }

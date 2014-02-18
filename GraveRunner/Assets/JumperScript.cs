@@ -5,8 +5,8 @@ public class JumperScript : MonoBehaviour {
 
 	public static float height;
 	private bool canMove = true;
-	public float jumpTime = 2;
-	public float diveTime = 2;
+	public float jumpTime = 3;
+	public float diveTime = 3;
 
 	// Use this for initialization
 	void Start () {
@@ -18,12 +18,12 @@ public class JumperScript : MonoBehaviour {
 
 		if (Input.GetKeyDown("w")) {
 
-			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumPath"), "time", jumpTime));
+			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumPath"), "time", jumpTime/(GlobalVariables.speed + 0.5f), "transition", "linear"));
 				}
 
 		if (Input.GetKeyDown("s")) {
 
-			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("divePath"), "time", diveTime));
+			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("divePath"), "time", diveTime/(GlobalVariables.speed + 0.5f)));
 		}
 
 		height = transform.position.y;

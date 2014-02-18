@@ -25,7 +25,7 @@ public class VerticalMovementScript : MonoBehaviour {
 		verticalPos = transform.position.x;
 
 		//if (!isInLane){
-		iTween.MoveTo(gameObject, new Vector3(lane[currLane], 0, 0), (0.5f/GlobalVariables.speed));
+		iTween.MoveTo(gameObject, new Vector3(lane[currLane], 0, 0), (0.5f/GlobalVariables.speed/GlobalVariables.speed));
 		//}
 		
 		if (Input.GetKeyDown("a")) {

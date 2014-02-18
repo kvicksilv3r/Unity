@@ -36,15 +36,15 @@ public class CellScript : MonoBehaviour {
 		transform.position = new Vector3 (0,0, z);
 
 		if(z <= despawnPoint){
-			//transform.position = new Vector3(0,0, 56);
-			//script1.makeCell();
+
 			offset = z - despawnPoint;
-			//Destroy(gameObject);
+
 			z = 4*CellPrefab.renderer.bounds.size.z + offset;
+
 			Instantiate(GravePrefab, new Vector3(0, 0, z), Quaternion.identity);
 
-			Instantiate(EyePrefab, new Vector3(6, 0, z), Quaternion.identity);
-			Instantiate(GravePrefab, new Vector3(-6, 0, z), Quaternion.identity);
+			//Instantiate(EyePrefab, new Vector3(6, 0, z), Quaternion.identity);
+			//Instantiate(GravePrefab, new Vector3(-6, 0, z), Quaternion.identity);
 
 			Instantiate(EyePrefab, new Vector3(
 				(float)(transform.position.x + (0.25 * cellSize.x)), 0, z), Quaternion.identity);
