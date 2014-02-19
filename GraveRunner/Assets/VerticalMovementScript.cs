@@ -6,6 +6,7 @@ public class VerticalMovementScript : MonoBehaviour {
 
 	public int currLane = 1;
 	public float[] lane;
+	public float verticalSpeed = 0.7f;
 
 	public static float verticalPos;
 
@@ -25,7 +26,13 @@ public class VerticalMovementScript : MonoBehaviour {
 		verticalPos = transform.position.x;
 
 		//if (!isInLane){
-		iTween.MoveTo(gameObject, new Vector3(lane[currLane], 0, 0), (0.5f/GlobalVariables.speed/GlobalVariables.speed));
+		if (GlobalVariables.speed > 1) {
+			iTween.MoveTo (gameObject, new Vector3 (lane [currLane], 0, 0), (verticalSpeed / GlobalVariables.speed / GlobalVariables.speed));
+				} 
+
+			else {
+					iTween.MoveTo (gameObject, new Vector3 (lane [currLane], 0, 0), verticalSpeed);
+				}
 		//}
 		
 		if (Input.GetKeyDown("a")) {

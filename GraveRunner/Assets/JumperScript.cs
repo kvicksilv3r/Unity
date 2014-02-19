@@ -5,8 +5,8 @@ public class JumperScript : MonoBehaviour {
 
 	public static float height;
 	private bool canMove = true;
-	public float jumpTime = 3;
-	public float diveTime = 3;
+	public float jumpTime = 2;
+	public float diveTime = 2;
 
 	// Use this for initialization
 	void Start () {

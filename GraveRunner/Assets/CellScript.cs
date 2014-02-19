@@ -8,6 +8,7 @@ public class CellScript : MonoBehaviour {
 	public GameObject CellPrefab;
 	public GameObject GravePrefab;
 	public GameObject EyePrefab;
+	public GameObject TreePrefab;
 
 	public GameObject HangTreeLeftPrefab;
 
@@ -51,6 +52,12 @@ public class CellScript : MonoBehaviour {
 
 			Instantiate(GravePrefab, new Vector3(
 				(float)(transform.position.x - (0.25 * cellSize.x)), 0, z), Quaternion.identity);
+
+			Instantiate(TreePrefab, new Vector3(
+				(float)(transform.position.x + (0.5 * cellSize.x)), 0, z), Quaternion.identity);
+
+			Instantiate(TreePrefab, new Vector3(
+				(float)(transform.position.x - (0.5 * cellSize.x)), 0, z), Quaternion.identity);
 
 		}
 
