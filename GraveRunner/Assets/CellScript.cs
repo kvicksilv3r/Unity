@@ -26,6 +26,23 @@ public class CellScript : MonoBehaviour {
 		cellSize = CellPrefab.renderer.bounds.size;
 		despawnPoint = -cellSize.z;
 
+		Instantiate(GravePrefab, new Vector3(0, 0, z), Quaternion.identity);
+		
+		//Instantiate(EyePrefab, new Vector3(6, 0, z), Quaternion.identity);
+		//Instantiate(GravePrefab, new Vector3(-6, 0, z), Quaternion.identity);
+		
+		Instantiate(EyePrefab, new Vector3(
+			(float)(transform.position.x + (0.25 * cellSize.x)), 0, z), Quaternion.identity);
+		
+		Instantiate(GravePrefab, new Vector3(
+			(float)(transform.position.x - (0.25 * cellSize.x)), 0, z), Quaternion.identity);
+		
+		Instantiate(TreePrefab, new Vector3(
+			(float)(transform.position.x + (0.5 * cellSize.x)), 0, z), Quaternion.identity);
+		
+		Instantiate(TreePrefab, new Vector3(
+			(float)(transform.position.x - (0.5 * cellSize.x)), 0, z), Quaternion.identity);
+
 	}
 
 	// Update is called once per frame

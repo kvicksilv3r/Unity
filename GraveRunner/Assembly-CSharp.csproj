@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>F:/Unity/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>F:/Unity/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +57,7 @@
      <Compile Include="Assets\JumperScript.cs" />
      <Compile Include="Assets\LeftTreeScript.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
+     <Compile Include="Assets\ScoreScript.cs" />
      <Compile Include="Assets\SetupScript.cs" />
      <Compile Include="Assets\TreeChildScript.cs" />
      <Compile Include="Assets\TreeScript.cs" />

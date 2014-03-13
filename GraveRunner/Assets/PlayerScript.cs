@@ -12,6 +12,10 @@ public class PlayerScript : MonoBehaviour {
 	bool goingUp = false;
 	bool goingDown = false;
 	public GameObject Jumper;
+	public bool alive = true;
+	public int playerHP = 3;
+	public bool invul = false;
+	public int invultime;
 
 	//test 
 	public static Vector3[]jumpPath = new Vector3[3];
@@ -29,10 +33,42 @@ public class PlayerScript : MonoBehaviour {
 
 		transform.position = new Vector3 (VerticalMovementScript.verticalPos, JumperScript.height, 0);
 
+		if(playerHP <= 0)
+		{
+			print ("u ded sun");
+			alive = false;
+			playerHP = 1;
+		}
+
+		if (!alive) {
+						//print ("U be the deddedest");
+				}
+
+		if (invul) 
+		{
+			invultime --;
+		}
+		if (invultime < 1) 
+		{
+			invul = false;
+		}
+
+	}
+
+	void CollisionInvul ()
+	{
+		invul = true;
+		invultime = 30;
 	}
 
 	void OnCollisionEnter (Collision col)
 	{
-		print ("Lel feg u ist das homo");
+		if (!invul)
+		{
+			playerHP -= 1;
+			print ("Lel feg u ist das homo" + playerHP);
+			CollisionInvul ();
+		}
 	}
+
 }

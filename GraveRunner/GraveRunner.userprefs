@@ -1,6 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HangTreeScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScoreScript.cs">
     <Files>
       <File FileName="Assets\TreeScript.cs" Line="1" Column="1" />
       <File FileName="Assets\PlayerScript.cs" Line="1" Column="1" />
@@ -9,9 +9,11 @@
       <File FileName="Assets\GraveScript.cs" Line="1" Column="1" />
       <File FileName="Assets\GlobalVariables.cs" Line="1" Column="1" />
       <File FileName="Assets\JumperScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\VerticalMovementScript.cs" Line="19" Column="38" />
+      <File FileName="Assets\VerticalMovementScript.cs" Line="1" Column="1" />
       <File FileName="Assets\TreeChildScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\HangTreeScript.cs" Line="5" Column="18" />
+      <File FileName="Assets\HangTreeScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\SetupScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScoreScript.cs" Line="7" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
