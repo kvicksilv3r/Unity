@@ -9,8 +9,9 @@ public class CellScript : MonoBehaviour {
 	public GameObject GravePrefab;
 	public GameObject EyePrefab;
 	public GameObject TreePrefab;
+	public GameObject LampPrefab;
 
-	public GameObject HangTreeLeftPrefab;
+	public GameObject HangTreePrefab;
 
 	public float speed = 0.75f;
 	public Vector3 cellSize;
@@ -31,18 +32,19 @@ public class CellScript : MonoBehaviour {
 		//Instantiate(EyePrefab, new Vector3(6, 0, z), Quaternion.identity);
 		//Instantiate(GravePrefab, new Vector3(-6, 0, z), Quaternion.identity);
 		
-		Instantiate(EyePrefab, new Vector3(
-			(float)(transform.position.x + (0.25 * cellSize.x)), 0, z), Quaternion.identity);
+		Instantiate(HangTreePrefab, new Vector3(
+			GlobalVariables.rightLane, 0, z), Quaternion.identity);
 		
-		Instantiate(GravePrefab, new Vector3(
-			(float)(transform.position.x - (0.25 * cellSize.x)), 0, z), Quaternion.identity);
-		
-		Instantiate(TreePrefab, new Vector3(
-			(float)(transform.position.x + (0.5 * cellSize.x)), 0, z), Quaternion.identity);
-		
-		Instantiate(TreePrefab, new Vector3(
-			(float)(transform.position.x - (0.5 * cellSize.x)), 0, z), Quaternion.identity);
+		Instantiate(LampPrefab, new Vector3(
+			GlobalVariables.leftLane, 0, z), Quaternion.identity);
 
+		//"Cosmetics"
+
+		Instantiate(TreePrefab, new Vector3(
+			GlobalVariables.rightCosmetic, 0, z), Quaternion.identity);
+		
+		Instantiate(TreePrefab, new Vector3(
+			GlobalVariables.leftCosmetic, 0, z), Quaternion.identity);
 	}
 
 	// Update is called once per frame
