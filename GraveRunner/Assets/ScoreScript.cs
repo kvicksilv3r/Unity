@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScoreScript : MonoBehaviour {
 	public int score;
-	public float time;
+	public static float time;
 	public GUIText gTex;
 
 	// Use this for initialization
