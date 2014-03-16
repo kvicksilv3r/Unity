@@ -18,12 +18,12 @@ public class JumperScript : MonoBehaviour {
 
 		if (Input.GetKeyDown("w")) {
 
-			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumPath"), "time", jumpTime/(GlobalVariables.speed + 0.5f), "transition", "linear"));
+			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumPath"), "time", jumpTime/(GlobalVariables.speed + 0.5f), "delay", 0));
 				}
 
 		if (Input.GetKeyDown("s")) {
 
-			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("divePath"), "time", diveTime/(GlobalVariables.speed + 0.5f)));
+			iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("divePath"), "time", diveTime/(GlobalVariables.speed + 0.5f), "delay", 0));
 		}
 
 		height = transform.position.y;

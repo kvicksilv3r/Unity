@@ -16,7 +16,7 @@ public class VerticalMovementScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		lane = new float[]{-4.5f, 0, 4.5f};
+		lane = new float[]{GlobalVariables.leftLane, 0, GlobalVariables.rightLane};
 
 	}
 	
