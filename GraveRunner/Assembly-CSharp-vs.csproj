@@ -55,6 +55,7 @@
      <Compile Include="Assets\HangTreeRotationScript.cs" />
      <Compile Include="Assets\HangTreeScript.cs" />
      <Compile Include="Assets\JumperScript.cs" />
+     <Compile Include="Assets\LampRotationScript.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
      <Compile Include="Assets\ScoreScript.cs" />
      <Compile Include="Assets\SetupScript.cs" />

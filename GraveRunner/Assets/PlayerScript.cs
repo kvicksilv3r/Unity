@@ -10,8 +10,6 @@ public class PlayerScript : MonoBehaviour
     public bool isInLane = true;
     public float currHeight;
     public float defaultHeight;
-    bool goingUp = false;
-    bool goingDown = false;
     public GameObject Jumper;
     public bool alive = true;
     public int playerHP = 3;
@@ -28,6 +26,7 @@ public class PlayerScript : MonoBehaviour
         jumpPath = iTweenPath.GetPath("dapath");
         currHeight = transform.position.y;
         defaultHeight = transform.position.y;
+        GlobalVariables.playerDefHeight = defaultHeight;
     }
     
     // Update is called once per frame

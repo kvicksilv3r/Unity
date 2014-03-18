@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 public class TreeChildScript : MonoBehaviour {
 
-	Random random = new Random();
-
 	// Use this for initialization
 	void Start () {
 		transform.rotation = Quaternion.Euler(0, Random.value * 360, 0);
