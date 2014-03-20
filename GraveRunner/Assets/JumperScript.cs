@@ -1,67 +1,117 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class JumperScript : MonoBehaviour {
+public class JumperScript : MonoBehaviour
+{
 
-	public static float height;
-	//private bool canMove = true;
-	public float jumpTime = 2;
-	public float diveTime = 2;
+    public static float height;
+    //private bool canMove = true;
+    public float jumpTime = 2;
+    public float diveTime = 2;
     public float sinx = 0;
     public bool goingUp = false;
     public bool goingDown = false;
+    public float startPos = 0;
+    public float curPos = 0;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+    void Start()
+    {
+    
+    }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (Input.touchCount > 0 && 
+            Input.GetTouch(0).phase == TouchPhase.Began) {
+            startPos = Input.GetTouch(0).deltaPosition.y;
+        }
+
+		if (Input.touchCount > 0 && 
+		    Input.GetTouch(0).phase == TouchPhase.Ended) {
+			startPos = 0;
+			curPos = 0;
+		}
+
+		if (Input.touchCount > 0 && 
+		    Input.GetTouch(0).phase == TouchPhase.Canceled) {
+			startPos = 0;
+			curPos = 0;
+		}
+
+        if (Input.touchCount > 0 && 
+            Input.GetTouch(0).phase == TouchPhase.Moved) {
+            
+            // Get movement of the finger since last frame
+            curPos = Input.GetTouch(0).deltaPosition.y;
+
+        }
+    
+        if((curPos - startPos) < -100){
+            if (!goingDown && !goingUp)
+            {
+                goingDown = true;        
+                sinx = 0.55f;
+                startPos = curPos;
+            }
+        }
+
+        if((curPos - startPos) > 100){
+            if (!goingDown && !goingUp)
+            {
+                goingUp = true;        
+                sinx = 0.55f; 
+                startPos = curPos;
+            }
+        }
 
 
-		if (Input.GetKeyDown("w")) {
+        if (Input.GetKeyDown("w"))
+        {
 
-			//iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumPath"),
+            //iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("jumPath"),
             //"time", jumpTime/(GlobalVariables.speed + 0.5f), "delay", 0));
 
-            if(!goingUp && !goingDown)
+            if (!goingUp && !goingDown)
             {
                 goingUp = true;        
                 sinx = 0.55f; 
             }
 
-				}
+        }
 
-		if (Input.GetKeyDown("s")) {
+        if (Input.GetKeyDown("s"))
+        {
 
-			//iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("divePath"),
+            //iTween.MoveTo(gameObject, iTween.Hash("path", iTweenPath.GetPath("divePath"),
             //"time", diveTime/(GlobalVariables.speed + 0.5f), "delay", 0));
 
-            if(!goingDown && !goingUp)
+            if (!goingDown && !goingUp)
             {
                 goingDown = true;        
                 sinx = 0.55f; 
             }
 
-		}
+        }
 
-        if(goingUp) 
+        if (goingUp)
         {
-            transform.Translate(0, Mathf.Sin(sinx*1.55f)/4,0);
+            transform.Translate(0, Mathf.Sin(sinx * 1.55f) / 4, 0);
             
-            if(transform.position.y <= GlobalVariables.playerDefHeight)
+            if (transform.position.y <= GlobalVariables.playerDefHeight)
             {
                 goingUp = false;
                 goingDown = false;
                 transform.position = new Vector3(0, GlobalVariables.playerDefHeight, 0);
             }
         }        
-        if(goingDown)
+        if (goingDown)
         {
-            transform.Translate(0, -Mathf.Sin(sinx*1.5f)/4,0);
+            transform.Translate(0, -Mathf.Sin(sinx * 1.5f) / 4, 0);
             
-            if(transform.position.y >= GlobalVariables.playerDefHeight)
+            if (transform.position.y >= GlobalVariables.playerDefHeight)
             {
                 goingDown = false;
                 goingUp = false;
@@ -69,120 +119,29 @@ public class JumperScript : MonoBehaviour {
             }
         }  
 
-		height = transform.position.y;
+        height = transform.position.y;
 
         sinx += 0.1f;
 
-	}
+    }
 }
 
 /*
 
 
- IN UPDATE---
-
-sinx += 0.1;
-
----
-
-if(nextLane > 3)
-        {
-            nextLane = 3;
-        }
-        else if(nextLane < 1)
-        {
-            nextLane = 1;
-        }
+// Moves object according to finger movement on the screen
+    function Update () {
+        if (Input.touchCount > 0 && 
+          Input.GetTouch(0).phase == TouchPhase.Moved) {
         
-        //-----------------------------------------
-                
-        if(goingUp) 
-        {
-            player.model.move(0, FastMath.sin(sinx*1.75f)/7,0);
+            // Get movement of the finger since last frame
+            var touchDeltaPosition:Vector2 = Input.GetTouch(0).deltaPosition;
             
-            if(player.position.y <= defaultPos.y)
-            {
-                goingUp = false;
-            }
-        }        
-        if(goingDown)
-        {
-            player.model.move(0, -FastMath.sin(sinx*1.9f)/5,0);
-            
-            if(player.position.y >= defaultPos.y)
-            {
-                goingDown = false;
-            }
-        }  
-        //-----------------------------------------
-            
-            if(goingLeft)
-            {
-                //if(currLane > nextLane)
-                //{
-                    if(nextLane == 1)
-                    {
-                        if((player.position.x - (0.52*extent.x)*4*tpf) < leftLane.x )
-                        {
-                            goingLeft = false;
-                            currLane = 1;
-                            player.position.x = leftLane.x;
-                        }
-                        else if(player.position.x > leftLane.x)
-                        {
-                        player.position.x -= (0.52*extent.x)*4*tpf;
-                        }                        
-
-                    }
-                //}
-                    
-                    if(nextLane == 2)
-                    {
-                        if((player.position.x - (0.52*extent.x)*4*tpf) < defaultPos.x )
-                        {
-                            goingLeft = false;
-                            currLane = 2;
-                            player.position.x = defaultPos.x;
-                        }
-                        else if(player.position.x > defaultPos.x)
-                        {
-                        player.position.x -= (0.52*extent.x)*4*tpf;
-                        }
-
-                    }
-            }
-            
-            if(goingRight)
-            {
-                //if(currLane > nextLane)
-                //{
-                    if(nextLane == 3)
-                    {
-                        if((player.position.x + (0.52*extent.x)*4*tpf) > rightLane.x)
-                        {
-                            goingRight = false;
-                            currLane = 3;
-                            player.position.x = rightLane.x;
-                        }
-                        else if(player.position.x < rightLane.x)
-                        {
-                        player.position.x += (0.52*extent.x)*4*tpf;
-                        }
-                    }
-                     
-                    if(nextLane == 2)
-                    {
-                        if((player.position.x + (0.52*extent.x)*4*tpf) > defaultPos.x)
-                        {
-                            goingRight = false;
-                            currLane = 2;
-                            player.position.x = defaultPos.x;
-                        }
-                        else if(player.position.x < defaultPos.x)
-                        {
-                        player.position.x += (0.52*extent.x)*4*tpf;
-                        }
-                    }
+            // Move object across XY plane
+            transform.Translate (-touchDeltaPosition.x * speed, 
+                        -touchDeltaPosition.y * speed, 0);
+        }
+    }
 
 
         */ 

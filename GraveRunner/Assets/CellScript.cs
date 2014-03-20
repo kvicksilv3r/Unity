@@ -32,10 +32,10 @@ public class CellScript : MonoBehaviour {
 		//Instantiate(EyePrefab, new Vector3(6, 0, z), Quaternion.identity);
 		//Instantiate(GravePrefab, new Vector3(-6, 0, z), Quaternion.identity);
 		
-		Instantiate(HangTreePrefab, new Vector3(
+		Instantiate(LampPrefab, new Vector3(
 			GlobalVariables.rightLane, 0, z), Quaternion.identity);
 		
-		Instantiate(LampPrefab, new Vector3(
+        Instantiate(HangTreePrefab, new Vector3(
 			GlobalVariables.leftLane, 0, z), Quaternion.identity);
 
 		//"Cosmetics"
