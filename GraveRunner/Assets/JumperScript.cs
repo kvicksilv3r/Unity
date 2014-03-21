@@ -13,6 +13,7 @@ public class JumperScript : MonoBehaviour
     public bool goingDown = false;
     public float startPos = 0;
     public float curPos = 0;
+    public GUIText gTex;
 
     // Use this for initialization
     void Start()
@@ -26,14 +27,9 @@ public class JumperScript : MonoBehaviour
 
         if (Input.touchCount > 0 && 
             Input.GetTouch(0).phase == TouchPhase.Began) {
-            startPos = Input.GetTouch(0).deltaPosition.y;
+            startPos = Input.GetTouch(0).position.y;
+            curPos = Input.GetTouch(0).position.y;
         }
-
-		if (Input.touchCount > 0 && 
-		    Input.GetTouch(0).phase == TouchPhase.Ended) {
-			startPos = 0;
-			curPos = 0;
-		}
 
 		if (Input.touchCount > 0 && 
 		    Input.GetTouch(0).phase == TouchPhase.Canceled) {
@@ -42,10 +38,16 @@ public class JumperScript : MonoBehaviour
 		}
 
         if (Input.touchCount > 0 && 
+            Input.GetTouch(0).phase == TouchPhase.Ended) {
+            startPos = 0;
+            curPos = 0;
+        }
+
+        if (Input.touchCount > 0 && 
             Input.GetTouch(0).phase == TouchPhase.Moved) {
             
             // Get movement of the finger since last frame
-            curPos = Input.GetTouch(0).deltaPosition.y;
+            curPos = Input.GetTouch(0).position.y;
 
         }
     
@@ -122,6 +124,10 @@ public class JumperScript : MonoBehaviour
         height = transform.position.y;
 
         sinx += 0.1f;
+
+        //----
+        gTex.guiText.text = "startY = " + startPos + " curY = " + curPos;
+        //----
 
     }
 }
