@@ -1,15 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CSharpMenu.cs">
     <Files>
+      <File FileName="Assets\GhostScript.cs" Line="1" Column="1" />
       <File FileName="Assets\LampRotationScript.cs" Line="1" Column="1" />
       <File FileName="Assets\JumperScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\PlayerScript.cs" Line="72" Column="1" />
-      <File FileName="Assets\GlobalVariables.cs" Line="14" Column="2" />
+      <File FileName="Assets\PlayerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\GlobalVariables.cs" Line="1" Column="1" />
       <File FileName="Assets\CellScript.cs" Line="1" Column="1" />
       <File FileName="Assets\HangTreeRotationScript.cs" Line="1" Column="1" />
       <File FileName="Assets\HangTreeScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\VerticalMovementScript.cs" Line="54" Column="10" />
+      <File FileName="Assets\VerticalMovementScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\LivingTreeScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\ScoreScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\DethScreenScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\PlayAgainScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\FenceScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\CSharpMenu.cs" Line="19" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

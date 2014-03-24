@@ -11,8 +11,8 @@ public class PlayerScript : MonoBehaviour
     public float currHeight;
     public float defaultHeight;
     public GameObject Jumper;
-    public bool alive = true;
-    public int playerHP = 3;
+    public static bool alive = true;
+    public static int playerHP = 3;
     public bool invul = false;
     public int invultime;
 
@@ -22,11 +22,7 @@ public class PlayerScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        lane = new float[]{-4.5f, 0, 4.5f};
-        jumpPath = iTweenPath.GetPath("dapath");
-        currHeight = transform.position.y;
-        defaultHeight = transform.position.y;
-        GlobalVariables.playerDefHeight = defaultHeight;
+        transform.position = new Vector3(0, GlobalVariables.playerDefHeight, 0);
     }
     
     // Update is called once per frame
@@ -39,7 +35,6 @@ public class PlayerScript : MonoBehaviour
         {
             print("u ded sun");
             alive = false;
-            playerHP = 1;
         }
 
         if (!alive)
@@ -58,20 +53,20 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    void CollisionInvul()
-    {
-        invul = true;
-        invultime = 30;
-    }
-
     void OnCollisionEnter(Collision col)
     {
-        if (!invul)
+        if (invul == false)
         {
             playerHP -= 1;
             print("Lel feg u ist das homo" + playerHP);
             CollisionInvul();
         }
+    }
+
+    void CollisionInvul()
+    {
+        invul = true;
+        invultime = 30;
     }
 
 }

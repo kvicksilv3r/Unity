@@ -1,4 +1,4 @@
-﻿var isQuit=false;
+﻿var isQuit;
 
 function OnMouseEnter(){
 	//change text color

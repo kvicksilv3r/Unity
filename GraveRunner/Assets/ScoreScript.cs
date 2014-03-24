@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ScoreScript : MonoBehaviour {
-	public int score;
+	public static int score;
 	public static float time;
 	public static float displayTime;
 	public GUIText gTex;
@@ -14,9 +14,12 @@ public class ScoreScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(PlayerScript.alive){
 		time += Time.deltaTime;
+        }
 		displayTime = time/2;
 
-		gTex.guiText.text = Mathf.RoundToInt (displayTime).ToString ();
+		gTex.guiText.text = "Score: " + Mathf.RoundToInt (10 * displayTime).ToString ();
+        score = Mathf.RoundToInt (10 * displayTime);
 		}
 }

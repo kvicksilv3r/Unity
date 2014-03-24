@@ -39,16 +39,20 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>F:/Unity/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>F:/Unity/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CSharpMenu.cs" />
      <Compile Include="Assets\CellScript.cs" />
+     <Compile Include="Assets\DethScreenScript.cs" />
      <Compile Include="Assets\EyeScript.cs" />
+     <Compile Include="Assets\FenceScript.cs" />
      <Compile Include="Assets\Gem Shader\Example\GemSpawner.cs" />
+     <Compile Include="Assets\GhostScript.cs" />
      <Compile Include="Assets\GlobalVariables.cs" />
      <Compile Include="Assets\GraveRunnerAssets\Scripts\LifetimeVariables.cs" />
      <Compile Include="Assets\GraveScript.cs" />
@@ -56,6 +60,8 @@
      <Compile Include="Assets\HangTreeScript.cs" />
      <Compile Include="Assets\JumperScript.cs" />
      <Compile Include="Assets\LampRotationScript.cs" />
+     <Compile Include="Assets\LivingTreeScript.cs" />
+     <Compile Include="Assets\PlayAgainScript.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
      <Compile Include="Assets\ScoreScript.cs" />
      <Compile Include="Assets\SetupScript.cs" />
