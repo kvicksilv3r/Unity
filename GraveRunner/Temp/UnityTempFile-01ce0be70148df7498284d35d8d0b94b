@@ -1,0 +1,69 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_ANDROID
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_AUDIO_FMOD
+-define:ENABLE_MONO
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_GENERICS
+-define:ENABLE_SUBSTANCE
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:UNITY_ANDROID_API
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:UNITY_4_3_2
+-define:UNITY_4_3
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_WIN
+Assets/CSharpMenu.cs
+Assets/CellScript.cs
+Assets/DethScreenScript.cs
+Assets/EyeScript.cs
+Assets/FenceScript.cs
+"Assets/Gem Shader/Example/GemSpawner.cs"
+Assets/GhostScript.cs
+Assets/GlobalVariables.cs
+Assets/GraveRunnerAssets/Scripts/LifetimeVariables.cs
+Assets/GraveScript.cs
+Assets/HangTreeRotationScript.cs
+Assets/HangTreeScript.cs
+Assets/JumperScript.cs
+Assets/LampRotationScript.cs
+Assets/LivingTreeScript.cs
+Assets/PlayAgainScript.cs
+Assets/PlayerScript.cs
+Assets/ScoreScript.cs
+Assets/SetupScript.cs
+Assets/TreeChildScript.cs
+Assets/TreeScript.cs
+Assets/VerticalMovementScript.cs
+Assets/iTweenEditor/Examples/StartAndStopTween.cs
+"Assets/iTweenEditor/Helper Classes/EventParamMappings.cs"
+"Assets/iTweenEditor/Helper Classes/Vector3OrTransform.cs"
+"Assets/iTweenEditor/Helper Classes/Vector3OrTransformArray.cs"
+Assets/iTweenEditor/iTween.cs
+Assets/iTweenEditor/iTweenEvent.cs
+Assets/iTweenEditor/iTweenPath.cs
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"

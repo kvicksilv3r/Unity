@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
 
         transform.position = new Vector3(VerticalMovementScript.verticalPos, JumperScript.height, 0);
 
-        if (playerHP <= 0)
+        if (playerHP <= 0 && alive)
         {
             print("u ded sun");
             alive = false;
@@ -50,12 +50,11 @@ public class PlayerScript : MonoBehaviour
         {
             invul = false;
         }
-
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if (invul == false)
+        if (invul == false && alive)
         {
             playerHP -= 1;
             print("Lel feg u ist das homo" + playerHP);

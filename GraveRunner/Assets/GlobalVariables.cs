@@ -38,6 +38,6 @@ public class GlobalVariables : MonoBehaviour {
         else{
             speed = 0;
         }
-		gTex2.guiText.text = "speed = " + (speed).ToString ();
+        gTex2.guiText.text = "speed = " + (speed).ToString ();
 	}
 }
