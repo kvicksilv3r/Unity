@@ -4,15 +4,12 @@ using System.Collections.Generic;
 
 public class PlayerScript : MonoBehaviour
 {
-
+    public static int playerHp = 3;
     public int currLane = 1;
-    public float[] lane;
-    public bool isInLane = true;
     public float currHeight;
     public float defaultHeight;
     public GameObject Jumper;
     public static bool alive = true;
-    public static int playerHP = 3;
     public bool invul = false;
     public int invultime;
 
@@ -31,7 +28,7 @@ public class PlayerScript : MonoBehaviour
 
         transform.position = new Vector3(VerticalMovementScript.verticalPos, JumperScript.height, 0);
 
-        if (playerHP <= 0 && alive)
+        if (playerHp <= 0 && alive)
         {
             print("u ded sun");
             alive = false;
@@ -56,8 +53,9 @@ public class PlayerScript : MonoBehaviour
     {
         if (invul == false && alive)
         {
-            playerHP -= 1;
-            print("Lel feg u ist das homo" + playerHP);
+            playerHp -= 1;
+            print("Lel feg u ist das homo" + playerHp);
+            this.animation.Play("Take 001");
             CollisionInvul();
         }
     }

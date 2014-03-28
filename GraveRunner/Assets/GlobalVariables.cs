@@ -23,7 +23,7 @@ public class GlobalVariables : MonoBehaviour {
     public static void ResetLevel(){
         speed = 0.4f;
         PlayerScript.alive = true;
-        PlayerScript.playerHP = 3;
+        PlayerScript.playerHp = 3;
         ScoreScript.score = 0;
         ScoreScript.time = 0;
     }

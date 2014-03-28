@@ -10,7 +10,7 @@ public class ScoreScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        gTex3 = GameObject.Find("hpGuiText").GetComponent<GUIText>() as GUIText;
 	}
 	
 	// Update is called once per frame
@@ -23,6 +23,6 @@ public class ScoreScript : MonoBehaviour {
         gTex.guiText.text = "Score: " + Mathf.RoundToInt (10 * displayTime).ToString ();
         score = Mathf.RoundToInt (10 * displayTime);
 
-        gTex3.guiText.text = "Lives left: " + PlayerScript.playerHP.ToString ();
+        gTex3.guiText.text = "Lives left: " + PlayerScript.playerHp.ToString ();
 		}
 }

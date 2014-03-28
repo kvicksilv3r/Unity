@@ -13,7 +13,6 @@ public class PlayAgainScript : MonoBehaviour {
         }
         else
         {
-
             GlobalVariables.ResetLevel();
             Application.LoadLevel(1);
         }

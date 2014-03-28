@@ -28,10 +28,11 @@ public class CSharpMenu : MonoBehaviour
     {
         if (isQuit)
         {
-            Application.LoadLevel("Main Menu");
+            Application.Quit();
         } else
         {
             Application.LoadLevel(1);
         }
     }
+
 }
