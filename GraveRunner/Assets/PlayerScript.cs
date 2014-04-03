@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     public static bool alive = true;
     public bool invul = false;
     public int invultime;
+    Animator anim;
 
     //test 
     public static Vector3[]jumpPath = new Vector3[3];
@@ -20,6 +21,8 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(0, GlobalVariables.playerDefHeight, 0);
+        anim = GetComponent<Animator>();
+        anim.ResetTrigger("TriggerHurt");
     }
     
     // Update is called once per frame
@@ -55,8 +58,9 @@ public class PlayerScript : MonoBehaviour
         {
             playerHp -= 1;
             print("Lel feg u ist das homo" + playerHp);
-            this.animation.Play("Take 001");
             CollisionInvul();
+            MoonScript.setTime();
+            anim.SetTrigger("TriggerHurt");
         }
     }
 

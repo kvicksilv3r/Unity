@@ -12,11 +12,13 @@ public class CSharpMenu : MonoBehaviour
     }
 
     public bool isQuit;
+    public bool quitToMenu;
+    public bool playAgain;
         
     void OnMouseEnter()
     {
         //change text color
-        renderer.material.color = hoverColor;
+        //renderer.material.color = hoverColor;
     }
 
     void OnMouseExit(){
@@ -26,10 +28,19 @@ public class CSharpMenu : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (isQuit)
+        if(quitToMenu)
+        {
+            Application.LoadLevel("Main Menu");
+        }
+        else if(playAgain){
+            GlobalVariables.ResetLevel();
+            Application.LoadLevel(1);
+        }
+        else if (isQuit)
         {
             Application.Quit();
-        } else
+        } 
+        else
         {
             Application.LoadLevel(1);
         }

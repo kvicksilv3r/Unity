@@ -49,6 +49,7 @@
      <Compile Include="Assets\CSharpMenu.cs" />
      <Compile Include="Assets\CellScript.cs" />
      <Compile Include="Assets\CosmeticScript.cs" />
+     <Compile Include="Assets\DeathMusicScript.cs" />
      <Compile Include="Assets\DethScreenScript.cs" />
      <Compile Include="Assets\EyeScript.cs" />
      <Compile Include="Assets\FenceScript.cs" />
@@ -62,10 +63,11 @@
      <Compile Include="Assets\JumperScript.cs" />
      <Compile Include="Assets\LampRotationScript.cs" />
      <Compile Include="Assets\LivingTreeScript.cs" />
-     <Compile Include="Assets\PlayAgainScript.cs" />
+     <Compile Include="Assets\MoonScript.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
      <Compile Include="Assets\ScoreScript.cs" />
      <Compile Include="Assets\SetupScript.cs" />
+     <Compile Include="Assets\SoundScript.cs" />
      <Compile Include="Assets\TreeChildScript.cs" />
      <Compile Include="Assets\TreeScript.cs" />
      <Compile Include="Assets\VerticalMovementScript.cs" />
