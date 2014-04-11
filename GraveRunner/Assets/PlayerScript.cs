@@ -61,6 +61,7 @@ public class PlayerScript : MonoBehaviour
             CollisionInvul();
             MoonScript.setTime();
             anim.SetTrigger("TriggerHurt");
+            ScoreScript.multiplierTime = 0;
         }
     }
 
